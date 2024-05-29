@@ -5,8 +5,6 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-
-
 open class MorseAlphabetActivityUnitTest<T : Activity>(clazz: Class<T>): AbstractUnitTest<T>(clazz) {
 
     companion object {
@@ -63,6 +61,6 @@ open class MorseAlphabetActivityUnitTest<T : Activity>(clazz: Class<T>): Abstrac
         '6' to "-....",
         '7' to "--...",
         '8' to "---..",
-        '9' to "----.9"
+        '9' to "----."
     )
 }
