@@ -15,7 +15,6 @@ import org.robolectric.annotation.Config
 @Config(shadows = [CustomShadowAsyncDifferConfig::class])
 class Stage2UnitTest : MorseMainActivityUnitTest<MainActivity>(MainActivity::class.java){
 
-
     @Test
     fun `test00_Check text translating to morse`() {
         testActivity {
@@ -31,7 +30,7 @@ class Stage2UnitTest : MorseMainActivityUnitTest<MainActivity>(MainActivity::cla
         testActivity {
             assertTranslateTextToMorse(
                 text = "ANDROID TEST",
-                expectedMorse = ".- -. -.. .-. --- .. -..    - . ... -"
+                expectedMorse = ".- -. -.. .-. --- .. -..   - . ... -"
             )
         }
     }
@@ -50,7 +49,7 @@ class Stage2UnitTest : MorseMainActivityUnitTest<MainActivity>(MainActivity::cla
     fun `test03_Check morse translating to text 2`() {
         testActivity {
             assertTranslateMorseToText(
-                morse = ".- -. -.. .-. --- .. -..    - . ... -",
+                morse = ".- -. -.. .-. --- .. -..   - . ... -",
                 expectedText = "ANDROID TEST"
             )
         }
@@ -74,7 +73,7 @@ class Stage2UnitTest : MorseMainActivityUnitTest<MainActivity>(MainActivity::cla
         testActivity {
             assertTranslateTextToMorse(
                 text = "a lowercase text",
-                expectedMorse = ".-    .-.. --- .-- . .-. -.-. .- ... .    - . -..- -"
+                expectedMorse = ".-   .-.. --- .-- . .-. -.-. .- ... .   - . -..- -"
             )
         }
     }
@@ -84,7 +83,7 @@ class Stage2UnitTest : MorseMainActivityUnitTest<MainActivity>(MainActivity::cla
         testActivity {
             assertTranslateTextToMorse(
                 text = "This TEXT, has some unknown chars like $ # and !",
-                expectedMorse = "- .... .. ...    - . -..- - ?    .... .- ...    ... --- -- .    ..- -. -.- -. --- .-- -.    -.-. .... .- .-. ...    .-.. .. -.- .    ?    ?    .- -. -..    ?"
+                expectedMorse = "- .... .. ...   - . -..- - ?   .... .- ...   ... --- -- .   ..- -. -.- -. --- .-- -.   -.-. .... .- .-. ...   .-.. .. -.- .   ?   ?   .- -. -..   ?"
             )
         }
     }
