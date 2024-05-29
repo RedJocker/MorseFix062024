@@ -23,7 +23,7 @@ open class MorseMainActivityUnitTest<T : Activity>(clazz: Class<T>): AbstractUni
 
         val messageInitialText = "The $ID_TV_TEXT has a wrong initial text"
         val expectedInitialText = "text"
-        val actualInitialText = view.text.toString().lowercase()
+        val actualInitialText = view.text?.toString()?.lowercase()
         assertEquals(messageInitialText, expectedInitialText, actualInitialText)
 
         view
@@ -34,7 +34,7 @@ open class MorseMainActivityUnitTest<T : Activity>(clazz: Class<T>): AbstractUni
 
         val messageInitialText = "The $ID_TV_MORSE has a wrong initial text"
         val expectedInitialText = "morse"
-        val actualInitialText = view.text.toString().lowercase()
+        val actualInitialText = view.text?.toString()?.lowercase()
         assertEquals(messageInitialText, expectedInitialText, actualInitialText)
 
         view
@@ -45,7 +45,7 @@ open class MorseMainActivityUnitTest<T : Activity>(clazz: Class<T>): AbstractUni
 
         val messageInitialHint = "The $ID_ET_TEXT has a wrong initial hint"
         val expectedInitialHint = "text"
-        val actualInitialHint = view.hint.toString().lowercase()
+        val actualInitialHint = view.hint?.toString()?.lowercase()
         assertEquals(messageInitialHint, expectedInitialHint, actualInitialHint)
 
         view
@@ -56,7 +56,7 @@ open class MorseMainActivityUnitTest<T : Activity>(clazz: Class<T>): AbstractUni
 
         val messageInitialHint = "The $ID_ET_MORSE has a wrong initial hint"
         val expectedInitialHint = "morse"
-        val actualInitialHint = view.hint.toString().lowercase()
+        val actualInitialHint = view.hint?.toString()?.lowercase()
         assertEquals(messageInitialHint, expectedInitialHint, actualInitialHint)
 
         view
@@ -67,7 +67,7 @@ open class MorseMainActivityUnitTest<T : Activity>(clazz: Class<T>): AbstractUni
 
         val messageInitialText = "The $ID_BT_CLEAR has the wrong text"
         val expectedInitialText = "clear"
-        val actualInitialText = view.text.toString().lowercase()
+        val actualInitialText = view.text?.toString()?.lowercase()
         assertEquals(messageInitialText, expectedInitialText, actualInitialText)
 
         view
@@ -78,7 +78,7 @@ open class MorseMainActivityUnitTest<T : Activity>(clazz: Class<T>): AbstractUni
 
         val messageInitialText = "The $ID_BT_GUIDE has the wrong text"
         val expectedInitialText = "guide"
-        val actualInitialText = view.text.toString().lowercase()
+        val actualInitialText = view.text?.toString()?.lowercase()
         assertEquals(messageInitialText, expectedInitialText, actualInitialText)
 
         view
@@ -88,14 +88,14 @@ open class MorseMainActivityUnitTest<T : Activity>(clazz: Class<T>): AbstractUni
         val messageInitialText =
             "The $ID_ET_MORSE doesn't seem to represent the contents of $ID_ET_TEXT correctly"
         etText.setText(text)
-        assertEquals(messageInitialText, expectedMorse, etMorse.text.toString())
+        assertEquals(messageInitialText, expectedMorse, etMorse.text?.toString())
     }
 
     fun assertTranslateMorseToText(morse: String, expectedText: String) {
         val messageInitialText =
             "The $ID_ET_TEXT doesn't seem to represent the contents of $ID_ET_MORSE correctly"
         etMorse.setText(morse)
-        assertEquals(messageInitialText, expectedText, etText.text.toString())
+        assertEquals(messageInitialText, expectedText, etText.text?.toString())
     }
 
     fun <A: Activity>navigateToAlphabetActivity(clazz: Class<A>): Pair<MorseAlphabetActivityUnitTest<A>, Intent> {
