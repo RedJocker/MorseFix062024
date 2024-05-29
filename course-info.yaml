@@ -1,0 +1,8 @@
+type: hyperskill
+title: MorseFix
+language: English
+summary: Hyperskill lesson 34284
+programming_language: Kotlin
+environment: Android
+content:
+  - morse_translator

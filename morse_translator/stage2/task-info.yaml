@@ -1,0 +1,14 @@
+type: edu
+files:
+  - name: src/test/java/org/hyperskill/morsetranslator/internals/MorseAlphabetActivityUnitTest.kt
+    visible: false
+  - name: src/test/java/org/hyperskill/morsetranslator/internals/MorseMainActivityUnitTest.kt
+    visible: false
+  - name: src/test/java/org/hyperskill/morsetranslator/internals/AbstractUnitTest.kt
+    visible: false
+  - name: src/test/java/org/hyperskill/morsetranslator/internals/shadows/CustomShadowAsyncDifferConfig.java
+    visible: false
+  - name: src/test/java/org/hyperskill/morsetranslator/Stage1UnitTest.kt
+    visible: false
+  - name: src/test/java/org/hyperskill/morsetranslator/Stage2UnitTest.kt
+    visible: false
