@@ -86,14 +86,14 @@ open class MorseMainActivityUnitTest<T : Activity>(clazz: Class<T>): AbstractUni
 
     fun assertTranslateTextToMorse(text: String, expectedMorse: String) {
         val messageInitialText =
-            "The $ID_ET_MORSE doesn't seem to represent the contents of $ID_ET_TEXT correctly"
+            "The $ID_ET_MORSE doesn't seem to represent the contents of $ID_ET_TEXT correctly when input is <$text>"
         etText.setText(text)
         assertEquals(messageInitialText, expectedMorse, etMorse.text?.toString())
     }
 
     fun assertTranslateMorseToText(morse: String, expectedText: String) {
         val messageInitialText =
-            "The $ID_ET_TEXT doesn't seem to represent the contents of $ID_ET_MORSE correctly"
+            "The $ID_ET_TEXT doesn't seem to represent the contents of $ID_ET_MORSE correctly when input is <$morse>"
         etMorse.setText(morse)
         assertEquals(messageInitialText, expectedText, etText.text?.toString())
     }
