@@ -9,6 +9,7 @@ import org.junit.runners.MethodSorters
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 
+//version 1.1
 @RunWith(RobolectricTestRunner::class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @Config(shadows = [CustomShadowAsyncDifferConfig::class])

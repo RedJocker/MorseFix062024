@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import org.junit.Assert.assertEquals
 
+//version 1.1
 open class MorseMainActivityUnitTest<T : Activity>(clazz: Class<T>): AbstractUnitTest<T>(clazz) {
 
     companion object {

@@ -10,6 +10,7 @@ import org.robolectric.annotation.Implements;
 
 import java.util.concurrent.Executor;
 
+//version 1.1
 @Implements(AsyncDifferConfig.class)
 @SuppressWarnings({"unused"})
 public class CustomShadowAsyncDifferConfig {
